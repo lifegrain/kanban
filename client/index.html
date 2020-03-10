@@ -1,14 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <title>Kanban</title>
+    <style>
+        .contain {
+            max-height: 90vh;
+            overflow-y: scroll;
+        }
+
+        .task {
+            min-height: 50px;
+            word-wrap: normal;
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        .title {
+            color: slategrey;
+        }
+
+        .category {
+            background-color: lightgray;
+        }
+
+        body {
+            background-color: rgb(74, 103, 156);
+        }
+    </style>
 </head>
+
 <body>
-    
+
+    <div class="d-flex mt-3">
+        <div class="col-3">
+            <div class="rounded category">
+                <h6 class="title">Backlog</h6>
+                <div class="d-flex flex-column contain mt-4">
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum augue sed neque
+                            commodo, sagittis tempus elit dictum. Pellentesque non justo massa. In ipsum mi, dapibus ac
+                            dolor et, fermentum luctus nulla. Mauris molestie augue vel velit malesuada mattis. Aliquam
+                            dignissim quam eget condimentum porttitor. Aenean arcu dui, aliquet in tortor ac, fermentum
+                            faucibus turpis. Ut et ipsum non dui vulputate mattis. Proin lobortis lacus eget massa
+                            ultrices, eu fermentum nunc imperdiet. Sed ac metus mi. Aliquam convallis lectus justo, a
+                            congue metus egestas sollicitudin. Donec tempus egestas faucibus. Proin vitae tellus leo.
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Nam vulputate placerat elit eget porttitor. Integer lacus tellus, gravida eu diam id,
+                            sagittis sodales risus. Cras vitae ultricies justo, eget volutpat turpis. Integer luctus
+                            augue sit amet convallis maximus. Donec facilisis ipsum eu dapibus rhoncus. Etiam nec augue
+                            pulvinar, pellentesque massa et, efficitur mi.
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Donec consequat odio felis, eget sodales turpis tempus tincidunt. Integer pellentesque
+                            tortor est, vitae posuere dolor sodales varius. Fusce sagittis rutrum dictum. Donec blandit
+                            tellus at leo cursus congue. Integer sed venenatis mauris. Fusce suscipit leo id dui aliquam
+                            dictum. Mauris sed mi imperdiet, ultricies est vestibulum, cursus erat.
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Donec tellus ante, egestas eu lectus non, commodo laoreet justo. Morbi at viverra nunc.
+                            Maecenas non magna quis nibh pretium varius nec quis mi. Vivamus non viverra orci. Mauris
+                            leo justo, condimentum vitae lectus luctus, gravida feugiat nisi. Cras et leo risus.
+                            Phasellus eros ante, interdum ultricies sem non, tincidunt placerat mi. Fusce convallis elit
+                            nec facilisis sollicitudin. Pellentesque maximus maximus luctus. Integer pellentesque
+                            fermentum urna, non ultricies diam rutrum eget. Maecenas varius interdum sapien at
+                            tristique. In ac placerat felis. Morbi facilisis sapien sagittis malesuada sodales. Ut vel
+                            lacinia felis. Nam tortor est, efficitur a accumsan ac, tincidunt eu eros.
+
+                            Duis enim tortor, pulvinar at sodales ac, dignissim in mi. Cras imperdiet orci a justo
+                            fermentum, eget imperdiet velit rutrum. Integer sed augue condimentum, consectetur tortor
+                            eu, egestas quam.
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Praesent a iaculis turpis, eget ultrices neque. Sed efficitur turpis mi. Duis mattis nibh in
+                            arcu rutrum iaculis. Cras eget arcu sem. Integer pellentesque a dolor eget luctus. Aliquam
+                            euismod magna in quam ultricies, at interdum ex pretium. Proin pharetra, leo vel aliquet
+                            faucibus, turpis purus sollicitudin justo, iaculis finibus velit neque et dolor.
+                            Pellentesque fermentum enim velit, eu varius libero laoreet sit amet. Cras ante dui, varius
+                            vitae viverra porta, aliquam non ligula.
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Quisque molestie eu arcu dignissim rutrum. Curabitur pellentesque turpis vitae est tempus
+                            fringilla. Aliquam erat volutpat. Duis a nisi augue. Proin accumsan, ex eu tincidunt
+                            rhoncus, felis felis pulvinar neque, at convallis odio quam nec quam. Donec non dui quis
+                            libero elementum blandit nec vitae nisi. Aenean justo est, lobortis ut massa quis, tristique
+                            posuere ligula. Curabitur volutpat nulla sed rhoncus aliquet. Ut massa augue, ultrices sit
+                            amet diam a, scelerisque venenatis justo. Vestibulum vel dui vel sapien tempus dictum. Cras
+                            imperdiet arcu et felis ultrices, et hendrerit metus placerat. Sed consequat tortor nec
+                            turpis convallis malesuada.
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test7
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test8
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test9
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="ml-1">add a card...</a>
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="rounded category">
+                <h6 class="title">Product</h6>
+                <div class="d-flex flex-column contain mt-4">
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test1
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test2
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test3
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test4
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test5
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test6
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test7
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test8
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="ml-1">add a card...</a>
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="rounded category">
+                <h6 class="title">Development</h6>
+                <div class="d-flex flex-column contain mt-4">
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test1
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test2
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test3
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="ml-1">add a card...</a>
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="rounded category">
+                <h6 class="title">Done</h6>
+                <div class="d-flex flex-column contain mt-4">
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test1
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test2
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test3
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test4
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test5
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test6
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test7
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test8
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test9
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test10
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test11
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test12
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test13
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test14
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test15
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test16
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test17
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test18
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test19
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test20
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-light my-1 rounded task">
+                            Test21
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="ml-1">add a card...</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
     <script src="script/main.js"></script>
 </body>
+
 </html>
