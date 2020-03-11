@@ -7,7 +7,8 @@ class TaskController {
 
         var newTask = {
             title,
-            category
+            category,
+            UserId: req.user.id
         }
 
         Model.Task.create(newTask)
