@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Kanban</title>
 
@@ -15,31 +15,7 @@
 
 <body>
 
-    <div id="app" :style="mounted" style="display: none;">
-        <!-- alert -->
-        <div class="alert alert-danger" v-show="alert.status">
-            <p>
-                Error Code: {{alert.code}}
-            </p>
-            <p>
-                {{alertMsg}}
-            </p>
-        </div>
-        <!-- login -->
-        <div class="d-flex" style="justify-content: center; align-items: center; height: 100%;" v-if="view === `login`">
-            <form @submit.prevent="login" class="loginForm">
-                <h3>Login</h3>
-                <div class="form-group">
-                  <label for="email">Email address</label>
-                  <input v-model="loginForm.email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
-                </div>
-                <div class="form-group">
-                  <label for="password">Password</label>
-                  <input v-model="loginForm.password" type="password" class="form-control" id="password" placeholder="Password" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Login</button>
-              </form>
-        </div>
+    <div id="app">
         <!-- kanban -->
         <div class="d-flex p-2" v-if="view === `main`">
             <div class="col-3" v-for="(val, name) in category">
@@ -59,10 +35,8 @@
     </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <script src="assets/script/main.js"></script>
+    <script src="src/main.js"></script>
 </body>
 
 </html>

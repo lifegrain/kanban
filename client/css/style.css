@@ -39,7 +39,7 @@ body {
     height: 100vh;
 }
 
-.loginForm {
+.Form {
     width: 35%;
     height: fit-content;
     background-color: whitesmoke;
@@ -51,6 +51,4 @@ body {
 .alert {
     position: absolute;
     width: 100%;
-    top: -100%;
-    transition: top 5s ease-in-out;
 }
