@@ -7,7 +7,9 @@ const port = process.env.PORT || 3000
 const router = require(`./routes`)
 const errorHandling = require(`./middleware/errorHandler`)
 
-app.use(cors())
+app.use(cors({
+    origin: `https://kanban-terry.firebaseapp.com`
+}))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
