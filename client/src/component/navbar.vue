@@ -3,7 +3,7 @@
     <a class="navbar-brand" href="#">Kanban</a>
 
     <div class="d-flex" style="width: fit-content;" id="navbarSupportedContent">
-      <div id="GSignIn" class="g-signin2" @done="onSignIn" v-show="view !== `main`"></div>
+      <GoogleLogin :params="params" :renderParams="renderParams" :onSuccess="onSignIn" v-if="view !== `main`"></GoogleLogin>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="#" v-if="view !== `main`" @click="$emit(`page`,`login`)">Login</a>
@@ -14,12 +14,24 @@
   </nav>
 </template>
 <script>
+import GoogleLogin from "vue-google-login";
+
 export default {
   props: [`view`],
-  mounted() {
-    gapi.signin2.render("GSignIn", {
-      onsuccess: this.onSignIn
-    });
+  data() {
+    return {
+      params: {
+        client_id: "726483685281-blhivbkt5b9m8rqcpkqs5qto9ms50mn3.apps.googleusercontent.com"
+      },
+      renderParams: {
+        width: 250,
+        height: 30,
+        longtitle: true
+      }
+    };
+  },
+  components: {
+    GoogleLogin
   },
   methods: {
     logout() {

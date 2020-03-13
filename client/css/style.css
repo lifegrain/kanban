@@ -100,3 +100,9 @@ p {
     cursor: pointer;
     background-color: rgb(218, 218, 218);
 }
+
+.bi-eye-fill {
+    padding: 0;
+    margin: 0 !important;
+    margin-left: 15px !important;
+}

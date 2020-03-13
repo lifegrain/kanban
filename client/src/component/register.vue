@@ -15,14 +15,14 @@
         />
       </div>
       <div class="form-group">
-        <label for="password">Password</label>
+        <label for="password">Password</label><BIconEyeFill class="h5" @click="show"></BIconEyeFill>
         <input
           v-model="registerForm.password"
-          type="password"
           class="form-control"
           id="password"
           placeholder="Password"
           required
+          :type="type"
         />
       </div>
       <button type="submit" class="btn btn-primary">Register</button>
@@ -41,7 +41,8 @@ export default {
       registerForm: {
         email: ``,
         password: ``
-      }
+      },
+      type: `password`
     };
   },
   props: [`view`],
@@ -55,6 +56,13 @@ export default {
 
       this.registerForm.email = ``;
       this.registerForm.password = ``;
+    },
+    show() {
+      if (this.type === `password`) {
+        this.type = `text`
+      } else {
+        this.type = `password`
+      }
     }
   }
 };

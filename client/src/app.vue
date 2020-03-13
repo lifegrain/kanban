@@ -46,6 +46,7 @@ export default {
   },
   methods: {
     page(current) {
+      this.alert.status = false
       this.view = current;
     },
     login(email, password) {
