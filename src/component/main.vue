@@ -112,7 +112,7 @@
 import card from "./card";
 import axios from "axios";
 
-const server = `http://localhost:3000`;
+const server = `https://kanban-h8-1584088116232.web.app/`;
 
 export default {
   props: [`view`],

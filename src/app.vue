@@ -17,7 +17,7 @@ import kanban from "./component/main";
 import navbar from "./component/navbar";
 import axios from "axios";
 
-const server = `http://localhost:3000`;
+const server = `https://kanban-h8-1584088116232.web.app/`;
 
 export default {
   data() {
