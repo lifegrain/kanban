@@ -24,7 +24,8 @@ class TaskController {
         Model.Task.findAll({
             where: {
                 UserId
-            }
+            },
+            order: [[`createdAt`, `ASC`]]
         })
             .then(data => {
                 res.status(200).json(data)

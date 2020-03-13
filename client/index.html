@@ -16,26 +16,9 @@
 <body>
 
     <div id="app">
-        <!-- kanban -->
-        <div class="d-flex p-2" v-if="view === `main`">
-            <div class="col-3" v-for="(val, name) in category">
-                <div class="rounded category">
-                    <h6 class="title">{{name}}</h6>
-                    <div class="d-flex flex-column contain">
-                        <div v-for="task in val">
-                            <div class="bg-light my-1 rounded task">
-                                {{task}}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="addCard">add a card...</div>
-                </div>
-            </div>
-        </div>
     </div>
-
-
-
+    
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="src/main.js"></script>
 </body>
 

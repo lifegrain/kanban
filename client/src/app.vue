@@ -1,14 +1,20 @@
 <template>
   <div id="app">
-    <alert :error="alert"></alert>
-    <login :view="view" @login="login" @page="page"></login>
-    <register :view="view" @register="register" @page="page"></register>
+    <navbar :view="view" @page="page"></navbar>
+    <div class="content">
+      <alert :error="alert"></alert>
+      <login v-if="view === `login`" @login="login" @page="page"></login>
+      <register v-if="view === `register`" @register="register" @page="page"></register>
+      <kanban v-if="view === `main`" @error="error" @page="page"></kanban>
+    </div>
   </div>
 </template>
 <script>
 import login from "./component/login";
 import alert from "./component/alert";
 import register from "./component/register";
+import kanban from "./component/main";
+import navbar from "./component/navbar";
 import axios from "axios";
 
 const server = `http://localhost:3000`;
@@ -34,7 +40,9 @@ export default {
   components: {
     login,
     alert,
-    register
+    register,
+    navbar,
+    kanban
   },
   methods: {
     page(current) {
@@ -79,10 +87,13 @@ export default {
           this.view = `main`;
         })
         .catch(err => {
-          this.alert.status = true;
-          this.alert.code = err.response.data.status_code;
-          this.alert.msg = err.response.data.status_message;
+          error(err);
         });
+    },
+    error(err) {
+      this.alert.status = true;
+      this.alert.code = err.response.data.status_code;
+      this.alert.msg = err.response.data.status_message;
     }
   }
 };

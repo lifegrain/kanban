@@ -1,9 +1,5 @@
 <template>
-  <div
-    class="d-flex"
-    style="justify-content: center; align-items: center; height: 100%;"
-    v-if="view === `login`"
-  >
+  <div class="d-flex loginRegister">
     <form @submit.prevent="submit" class="Form">
       <h3>Login</h3>
       <div class="form-group">
@@ -30,7 +26,11 @@
         />
       </div>
       <button type="submit" class="btn btn-primary">Login</button>
-      <button type="button" class="btn btn-primary float-right" @click="$emit(`page`,`register`)">Register</button>
+      <button
+        type="button"
+        class="btn btn-primary float-right"
+        @click="$emit(`page`,`register`)"
+      >Register</button>
     </form>
   </div>
 </template>
@@ -47,10 +47,10 @@ export default {
   props: [`view`],
   methods: {
     submit() {
-      this.$emit(`login`, this.loginForm.email, this.loginForm.password)
+      this.$emit(`login`, this.loginForm.email, this.loginForm.password);
 
-      this.loginForm.email = ``
-      this.loginForm.password = ``
+      this.loginForm.email = ``;
+      this.loginForm.password = ``;
     }
   }
 };
