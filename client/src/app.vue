@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <navbar :view="view" @page="page"></navbar>
+    <navbar :view="view" @page="page" @googleSignIn="google"></navbar>
     <div class="content">
       <alert :error="alert"></alert>
       <login v-if="view === `login`" @login="login" @page="page"></login>
@@ -94,6 +94,22 @@ export default {
       this.alert.status = true;
       this.alert.code = err.response.data.status_code;
       this.alert.msg = err.response.data.status_message;
+    },
+    google(id_token) {
+      axios({
+        url: `${server}/users/googleSignIn`,
+        method: `post`,
+        data: {
+          id_token
+        }
+      })
+        .then(({ data }) => {
+          localStorage.token = data.token
+          this.page(`main`)
+        })
+        .catch(err => {
+          this.error(err);
+        });
     }
   }
 };
