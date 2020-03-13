@@ -168,7 +168,7 @@ export default {
     },
     getTasks() {
       axios({
-        url: `${server}/tasks`,
+        url: `${server}tasks`,
         method: `get`,
         headers: {
           token: localStorage.token
@@ -183,7 +183,7 @@ export default {
     },
     addTasks() {
       axios({
-        url: `${server}/tasks`,
+        url: `${server}tasks`,
         method: `post`,
         data: {
           title: this.addForm.title,
@@ -204,7 +204,7 @@ export default {
     },
     editTasks() {
       axios({
-        url: `${server}/tasks/${this.editForm.id}`,
+        url: `${server}tasks/${this.editForm.id}`,
         method: `put`,
         headers: {
           token: localStorage.token
@@ -223,7 +223,7 @@ export default {
     },
     deleteTasks(id) {
       axios({
-        url: `${server}/tasks/${id}`,
+        url: `${server}tasks/${id}`,
         method: `delete`,
         headers: {
           token: localStorage.token

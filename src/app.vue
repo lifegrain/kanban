@@ -53,7 +53,7 @@ export default {
       this.alert.status = false;
 
       axios({
-        url: `${server}/users/login`,
+        url: `${server}users/login`,
         method: `post`,
         data: {
           email,
@@ -75,7 +75,7 @@ export default {
       this.alert.status = false;
 
       axios({
-        url: `${server}/users/register`,
+        url: `${server}users/register`,
         method: `post`,
         data: {
           email,
@@ -88,7 +88,7 @@ export default {
           this.view = `main`;
         })
         .catch(err => {
-          error(err);
+          this.error(err);
         });
     },
     error(err) {
@@ -98,7 +98,7 @@ export default {
     },
     google(id_token) {
       axios({
-        url: `${server}/users/googleSignIn`,
+        url: `${server}users/googleSignIn`,
         method: `post`,
         data: {
           id_token
